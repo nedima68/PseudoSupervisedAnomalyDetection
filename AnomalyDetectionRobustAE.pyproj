@@ -1,0 +1,168 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6baf05ee-5a0b-4f64-abde-315c82d74808</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>AnomalyDetectionRobustAE.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>AnomalyDetectionRobustAE</Name>
+    <RootNamespace>AnomalyDetectionRobustAE</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|Anaconda3</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AnomalyDetectionRobustAE.py" />
+    <Compile Include="base\base_dataset.py" />
+    <Compile Include="base\base_data_types.py" />
+    <Compile Include="base\base_net.py" />
+    <Compile Include="base\base_trainer.py" />
+    <Compile Include="base\torchvision_dataset.py" />
+    <Compile Include="base\__init__.py" />
+    <Compile Include="datasets\AITEXDataset.py" />
+    <Compile Include="datasets\Cifar10Dataset.py" />
+    <Compile Include="datasets\DatasetWrapper.py" />
+    <Compile Include="datasets\MNISTDataset.py" />
+    <Compile Include="datasets\OnlineAITEXImageDataset.py" />
+    <Compile Include="datasets\preprocessing.py" />
+    <Compile Include="Experiments.py" />
+    <Compile Include="ImgProcessing\FeatureContourGenerator.py" />
+    <Compile Include="ImgProcessing\NCutFeatureExtractor.py" />
+    <Compile Include="ImgProcessing\NCUTSegmentationTest.py" />
+    <Compile Include="methodologies\CAE_IFORESTMethod.py" />
+    <Compile Include="methodologies\Robust_AE_Method.py" />
+    <Compile Include="NeuralNetworks\CNN_SVDD32x32.py" />
+    <Compile Include="NeuralNetworks\CNN_SVDD64x64.py" />
+    <Compile Include="NeuralNetworks\main.py" />
+    <Compile Include="NeuralNetworks\MNIST_LeNet.py" />
+    <Compile Include="optimizers\autoencoder_trainer.py" />
+    <Compile Include="optimizers\deepSVDD_trainer.py" />
+    <Compile Include="optimizers\robust_AE_trainer.py" />
+    <Compile Include="optimizers\__init__.py" />
+    <Compile Include="prepare_AITEX_dataset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utils\config.py" />
+    <Compile Include="utils\data_processing\l1shrink.py" />
+    <Compile Include="utils\data_processing\l21shrink.py" />
+    <Compile Include="utils\data_processing\NoiseGenerator.py" />
+    <Compile Include="utils\data_processing\perlin.py" />
+    <Compile Include="utils\data_processing\PerlinNoiseTest.py" />
+    <Compile Include="utils\data_processing\StructuralSimilarityCalculator.py" />
+    <Compile Include="utils\JsonResultsToLatexGenerator.py" />
+    <Compile Include="utils\parse_json_files_to_latex_table.py" />
+    <Compile Include="utils\pytorch_summary.py" />
+    <Compile Include="utils\statistics_collector.py" />
+    <Compile Include="utils\visualization\create_heat_map.py" />
+    <Compile Include="utils\visualization\display_sample_patches.py" />
+    <Compile Include="utils\visualization\plot_iforest_results.py" />
+    <Compile Include="utils\visualization\plot_images_grid.py" />
+    <Compile Include="utils\visualization\Plot_PR_F1_Curves.py" />
+    <Compile Include="utils\visualization\plot_test_result_scatter_graph.py" />
+    <Compile Include="utils\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="base\" />
+    <Folder Include="base\__pycache__\" />
+    <Folder Include="datasets\" />
+    <Folder Include="datasets\__pycache__\" />
+    <Folder Include="ImgProcessing\" />
+    <Folder Include="ImgProcessing\__pycache__\" />
+    <Folder Include="methodologies\" />
+    <Folder Include="methodologies\__pycache__\" />
+    <Folder Include="NeuralNetworks\" />
+    <Folder Include="NeuralNetworks\__pycache__\" />
+    <Folder Include="optimizers\" />
+    <Folder Include="optimizers\__pycache__\" />
+    <Folder Include="utils\" />
+    <Folder Include="utils\data_processing\" />
+    <Folder Include="utils\data_processing\__pycache__\" />
+    <Folder Include="utils\visualization\" />
+    <Folder Include="utils\visualization\__pycache__\" />
+    <Folder Include="utils\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="base\__pycache__\base_dataset.cpython-37.pyc" />
+    <Content Include="base\__pycache__\base_data_types.cpython-37.pyc" />
+    <Content Include="base\__pycache__\base_net.cpython-37.pyc" />
+    <Content Include="base\__pycache__\base_trainer.cpython-37.pyc" />
+    <Content Include="base\__pycache__\torchvision_dataset.cpython-37.pyc" />
+    <Content Include="base\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\AITEXDataset.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\Cifar10Dataset.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\CustomFabricDataset.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\DatasetWrapper.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\MNISTDataset.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\OnlineAITEXImageDataset.cpython-37.pyc" />
+    <Content Include="datasets\__pycache__\preprocessing.cpython-37.pyc" />
+    <Content Include="ImgProcessing\__pycache__\FeatureContourGenerator.cpython-37.pyc" />
+    <Content Include="ImgProcessing\__pycache__\NCutFeatureExtractor.cpython-37.pyc" />
+    <Content Include="main.bat" />
+    <Content Include="methodologies\__pycache__\CAE_IFORESTMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\CAE_IForestOptimizedMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\CVAEMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\CVAE_IForestMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\DeepRobustSVDDMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\DeepSudoS_SVDDMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\deepSVDDMethod.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\Robust_AE_Method.cpython-37.pyc" />
+    <Content Include="methodologies\__pycache__\SudoS_CNN_ClassifierMethod.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_2C_Classifier.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_SVDD.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_SVDD32x32.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_SVDD64x64.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_SVDDv2.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CNN_VAE_Probabilistic.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\CVAE_Simple.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\main.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\MNIST_LeNet.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\OC_CNN_VAE.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\ShallowCNN_SVDD.cpython-37.pyc" />
+    <Content Include="NeuralNetworks\__pycache__\StDenoisingCAE.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\autoencoder_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\CNN_2C_classifier_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\deepSVDD_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\ISOF_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\robust_AE_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\VAE_ProbTrainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\VAE_trainer.cpython-37.pyc" />
+    <Content Include="optimizers\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="utils\data_processing\__pycache__\l21shrink.cpython-37.pyc" />
+    <Content Include="utils\data_processing\__pycache__\NoiseGenerator.cpython-37.pyc" />
+    <Content Include="utils\data_processing\__pycache__\perlin.cpython-37.pyc" />
+    <Content Include="utils\data_processing\__pycache__\StructuralSimilarityCalculator.cpython-37.pyc" />
+    <Content Include="utils\visualization\__pycache__\create_heat_map.cpython-37.pyc" />
+    <Content Include="utils\visualization\__pycache__\display_sample_patches.cpython-37.pyc" />
+    <Content Include="utils\visualization\__pycache__\plot_iforest_results.cpython-37.pyc" />
+    <Content Include="utils\visualization\__pycache__\plot_images_grid.cpython-37.pyc" />
+    <Content Include="utils\visualization\__pycache__\plot_test_result_scatter_graph.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\config.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\parse_json_files_to_latex_table.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\pytorch_summary.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\statistics_collector.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\version.cpython-37.pyc" />
+    <Content Include="utils\__pycache__\__init__.cpython-37.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Anaconda3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
